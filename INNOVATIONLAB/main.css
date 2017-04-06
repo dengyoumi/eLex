@@ -1,0 +1,222 @@
+
+/*main division css****************************************/
+
+
+.top_bar {
+	/* */
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	background-color: white;
+	margin-top: 1rem;
+	z-index:10;
+}
+
+#key_words{
+	position: relative;
+	background-color:#d6d1d3;
+	height: 4rem;
+	
+}
+
+ #search_icon{
+	 height:2rem;
+ }
+
+ #search_area{
+	 width:40rem; float:left; margin-top: 2rem; height: auto;
+	 border: 1px; border-color:black;border-style:solid;
+	 box-shadow: 3px 3px 3px black;
+ }
+
+.search_box{
+	outline: none;
+	position: relative;
+	float:left;
+	
+	width:35rem; height: 2.5rem;
+	border: none; padding: 0px; margin: 3px; 
+}
+
+#tr_button_area{
+	
+	height: 8rem;
+	width: 15rem;
+	float: right;
+	top: 0;
+	display: inline-block;
+	margin-right: 2rem;
+}
+
+
+.collection_bar {
+	float:right;
+
+	width: 16rem;
+	height: 40rem;
+
+	right:0px;
+	position:fixed;
+
+}
+
+.collection_area_sub1{
+	margin:0rem;
+	background-color: orange;
+}
+
+.collection_area_sub2{
+	position:relative;
+	float:left;
+	margin-left:1.5rem;
+	margin-right:1.5rem;
+	height: 18rem;
+	width: 13rem;
+	background-color:green;
+}
+
+#current_saving{
+	
+	margin-left:3rem;
+}
+
+#pass_saving{
+	background-color:grey;
+	float:right;
+	margin-right:3rem;
+}
+
+
+.bottom_bar {	
+	position:relative;
+	float:left;
+	width: 100%;
+	height: 3rem;
+	background-color: #d6d1d3;
+	margin: 0px;
+	z-index:10;
+	bottom: 0px;
+}
+.bottom_bar_info {
+	float:left;
+	display:block-linear;
+	margin-left: 3rem;
+	crusor: none;
+	margin-top: 1rem;
+}
+
+.Copy_right_text {
+	float:right;
+	margin-top:1rem;
+	margin-right:2rem;	
+}
+
+
+body {
+	font-family: AvenirNext-Regular,Arial,sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+/*pop up page css****************************************/
+.mainpage_pop_up{
+	position: fixed;
+
+	background-color: white;
+	z-index: 12;
+	opacity:1;
+	width: 600px;
+	
+	border-radius: 10px;
+	top: 30%;
+	left: 50%;
+	margin-left: -300px;
+	border-style: outset;
+	border-width: 5px;
+	text-align:center;
+
+}
+
+
+#login_box{
+	left: 50%;
+	margin-left: -300px;
+	top: 50%;
+	margin-top: -200px;
+}
+
+.form_1{
+	
+	
+	font-size:1.5rem;
+	border-radius: 10px;
+	margin:10px;
+	
+		
+		
+}
+
+.p{
+	display: block;
+}
+/***************************************text boxs***/
+.lr_input{
+	font: inherit;
+	width: 90%;
+
+}
+
+.min {
+	
+}
+
+#save_info_discription{
+	
+}
+
+#dlp{
+	/* to display lawyer profile*/
+}
+
+#welcome_page{
+	position: fixed;
+
+	background-color: white;
+	z-index: 12;
+	opacity:1;
+	width: 1000px;
+	
+	border-radius: 10px;
+	top: 10%;
+	left: 50%;
+	margin-left: -500px;
+	height: 80%;
+}
+
+/*logo*********************************************************/
+#top_bar_logo {
+	height: 7rem;
+	float: left;
+	right: 0%;
+}
+
+/**********************************************emergency page*************************/
+.E_question{
+	margin-left: 3rem;
+	text-align: center;
+	width: 8rem;
+	height: 5rem;
+	font-size: 0.7em;
+	display:inline-block;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-top: 10px;
+	
+}
+
+.E_question_input {
+	width: 4.5rem;
+	height: 1.5rem;
+}

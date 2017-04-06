@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">	
+		 <title>eLex</title>
+
+		
+	
+
+
+		<link rel="stylesheet" type="text/css" href="main.css"></link>
+		<link rel="stylesheet" type="text/css" href="buttons.css"></link>
+		<link rel="stylesheet" type="text/css" href="visual_effect.css"></link>
+		<link rel="stylesheet" type="text/css" href="result_page.css"></link>
+		<link rel="stylesheet" type="text/css" href="fade.css"></link>
+		 <script src="function_file.js"></script> <!--load js funciton-->
+	</head>
+
+		
+		
+
+	<body>
+	
+			<!--pop up pages ----------------------------------------------------------------------------------------->
+		
+			
+			<div class="mainpage_pop_up" style="display:none; width: 1000px; height: 800px; margin-left:-500px; top: 10%" id="Emergency_page">
+			<!--!, Emergency. case name, key words, discriptions, response within x min, number of lawyers to sent info, discription text box -->
+				
+				<form class="form_1">
+				
+				<div style="display: block; width: 100%; margin: 10px; ">
+					<div style="text-align:center; margin:10px; margin-top: 20px; font-weight:bold;"> Key Words to Filter Lawyers</div>
+					<input class="lr_input" id="user_name_login" type="text" placeholder="Please enter your the key words. (e.g. SPA, Chicago, Contract)">
+					</input>
+				</div>
+				<div style="width:100%;background-color:#f4f2f2;">
+					<div style="margin-left: 40px; margin-top: 20px; font-size:20px;">Click to Add</div>
+					<div class="kw_info_tag" style="font-size:0.8em;">Employment</div>
+					<div class="kw_info_tag" style="font-size:0.8em;">Licensing</div>
+					<div class="kw_info_tag" style="font-size:0.8em;">Tax</div>
+				</div>
+					
+				<div style="">
+				
+					<div class="E_question">
+						<div>Your Budgent</div><br>
+						<input class="E_question_input" id="user_name_login" type="text">
+						</input>
+					</div>
+				
+					
+					<div class="E_question">
+						<div>Finish Before</div><br>
+						<input class="E_question_input" id="user_name_login" type="text" placeholder="2017/8/31">
+					</div>
+						
+					<div class="E_question">
+						Sent to <br>
+							<select style="height:1.5rem;" class="">
+							  <option value="3">3	</option>
+							  <option value="5">5</option>
+							  <option value="10">10</option>
+							</select> <br>
+						Lawyers.
+					</div>
+					
+					<div class="E_question">
+						Response with in<br>
+							<select style="height:1.5rem;" class="">
+							  <option value="15">15	</option>
+							  <option value="30">30</option>
+							  <option value="60">60</option>
+							</select> <br>
+						Minutes
+					
+					</div>
+				</div>
+				
+				
+				
+				<div style="font-size:0.8em; margin-top: 30px; margin-bottom: 10px; background-color:#f4f2f2;">
+					<div style="text-align:center;">What you want to tell Lawyers </div><br>
+					<textarea placeholder="Please discribe your issues here" style="width:90%; margin-left:5%; height: 20rem; margin-bottom:30px;"> </textarea>
+				</div>
+				
+				</form>
+				
+				
+				
+				
+				<div onclick="close_sub_win('Emergency_page')" id="cancel_button" class="log_n_register">
+					Cancel
+				</div>
+				
+				<div onclick="open_page('submitted')" id="Emergency_submit" class="log_n_register">
+					Submit
+				</div>
+		
+				
+
+				
+			</div>
+			
+			<div class="mainpage_pop_up" style="display:none" id="submitted">
+			<!--!, Emergency help submitted -->
+				
+				<div style="width:100%; text-align:center; font-size:2em; margin-top:5rem; margin-bottom:5rem; font-weight:bold;">
+					Your request has been submitted.
+				</div>
+				
+				
+				
+				
+				<div onclick="close_sub_win('submitted')" id="cancel_button" class="log_n_register">
+					Close
+				</div>
+				
+				<div onclick="open_page('d_my_page')" id="Emergency_submit" class="log_n_register">
+					My Page
+				</div>
+		
+				
+
+				
+			</div>
+			
+			<div class="mainpage_pop_up animate-in" style="display:none" id="Login">
+			<!--  -->
+				
+				<form class="form_1">
+				
+				<p>
+				<label> User Name</label>
+				<input class="lr_input" id="user_name_login" type="text">
+				</p>
+				
+				<p>
+				<label> Password</label>
+				<input class="lr_input" id="password" type="text">
+				</form>
+				</p>
+				
+				<h2 type="button" onclick="open_page('Register')" class="first_time_user_ln bme" >
+					
+					First time user? Please register.
+				
+				</h2>
+				
+				
+				<div onclick="close_sub_win('Login')" id="cancel_button" class="log_n_register bme">
+					Cancel
+				</div>
+				
+				<div onclick="log_in()" id="login" class="log_n_register bme">
+					Login
+				</div>
+				
+
+				
+			</div>
+			
+			<div class="mainpage_pop_up" style="display:none" id="Register">
+			<!--  -->
+			
+				<form class="form_1">
+				
+					<p>
+					<label> User Name</label>
+					<input class="lr_input" id="user_name_register" type="text">
+					</p>
+					
+					<p>
+					<label> Password</label>
+					<input class="lr_input" id="password_register" type="text">
+					</p>
+					
+					<p>
+					<label> Repeat Password</label>
+					<input class="lr_input" id="password_register_repeat" type="text">
+					</p>
+					
+					<p>
+					<label> Email</label>
+					<input class="lr_input" id="email" type="text">
+					</p>
+					
+				</form>
+				
+			
+				<div onclick="close_sub_win('Register')" id="cancel_button" class="log_n_register bme">
+					Cancel
+				</div>
+				
+				
+				<div onclick="close_sub_win('Register')" id="register_button" class="log_n_register bme">
+					Register
+				</div>
+				
+		
+				
+				
+			</div>
+			
+			<div class="mainpage_pop_up" style="display:none" id="Save_info">
+			<!--saving search keywords -->
+				<form class="form_1">
+				
+						<p id="save_info_discription"></p>
+					
+						<p>
+						<label> Title </label>
+						<input class="lr_input" id="Search_title" type="text">
+						</p>
+						
+							<div class="collection_area_sub2" id="current_saving">
+							<!--info to save-->
+							
+							
+							</div>
+							
+							<div id="duplicate_icon">
+							<!--an arrow icon for adding all old info to the new one-->
+							
+							</div>
+							
+							<div class="collection_area_sub2" id="pass_saving">
+							<!--pass info-->
+							</div>
+						
+						
+						
+						
+					</form>
+			
+
+					
+					<div onclick="close_sub_win('Save_info')" class="log_n_register bme">
+						Cancel
+					</div>
+					
+					<div  id="save_info_save" class="log_n_register bme">
+						Save
+					</div>
+			
+
+			</div>
+			
+			
+			
+			
+			<div class="mainpage_pop_up" style="display:none" id="d_my_page">
+			<!--my page -->
+			<!--here, more qualitative data, strength & general area, self discription, availbility time block,reviews-->
+			
+				<h2> My Page</h2>
+			
+				<div id="my_page_1" style="display:none;" >
+				
+					<div class="mypage_button bme" >
+						View Offers			
+					</div>
+				
+					
+					<div class="mypage_button bme">
+						Current Cases
+					</div>
+						
+					<div class="mypage_button bme">
+						Write Review
+					</div>
+					
+					<div class="mypage_button bme">
+						Messages	
+					</div>
+				</div>
+				
+				<div id="my_page_2" style="display:block;">
+					<h3>Current Cases</h3>
+					<image style="width:100%" src="intro/progress.png"></image>
+				</div>
+			
+				<div type="button" class = "log_n_register bme" onclick="close_sub_win('d_my_page')">
+				Close
+				</div>
+				
+				
+			
+		
+			
+
+			</div>
+			
+			<div class="mainpage_pop_up bme" style="display:block； width: 1200px; height: 800px; margin-left:-500px; top: 10% " id="welcome_page" >
+			<!--welcome page -->
+			<!--here, more qualitative data, strength & general area, self discription, availbility time block,reviews-->
+				<div id="p0" style="display:block;width:100%;height:90%;" onclick="welcome_page_function(0)">
+					<h1>How it works?</h1>
+					<h2> 5 steps to have your problem being handled.</h2>
+					<h2> Start with</h2>
+					<image style="width:60%" src="intro/start_with.png"></image>
+				</div>
+					
+					
+					
+				<div id="p1" style="display:none;width:100%;height:90%;" onclick="welcome_page_function(1)">
+					<h2>Sent Information to Lawyers</h2>
+					<image style="width:100%" src="intro/p1.png"></image>
+				</div>
+				
+				<div id="p2" style="display:none;width:100%;height:90%;" onclick="welcome_page_function(2)">
+					<h2>Review Lawyers' Reply</h2>
+					<image style="width:100%" src="intro/Offer.png"></image>
+				</div>
+			
+				<div id="p3" style="display:none;width:100%;height:90%;" onclick="welcome_page_function(3)">
+					<h2>Contact Laywers</h2>
+					<image style="width:30%" src="intro/Contact_lawyer.png"></image>
+				</div>
+				
+				<div id="p4" style="display:none;width:100%;height:90%;" onclick="welcome_page_function(4)">
+					Make a Deal.
+					<image style="width:70%" src="intro/m_a_d.png"></image>
+				</div>
+				
+				<div id="p5" style="display:none;width:100%;height:90%;" onclick="welcome_page_function(5)">
+					Tract Progress
+					<image style="width:100%" src="intro/progress.png"></image>
+				</div>
+				
+				<div id="p6" style="display:none;width:100%;height:90%;" onclick="welcome_page_function(6)">
+					<image style="width:100%" src="intro/or.png"></image>
+				</div>
+				
+				<div id="p7" style="display:none;width:100%;height:90%;" onclick="welcome_page_function(7)">
+					<image style="width:100%" src="intro/start_here.png"></image>
+					<image style="width:30%" src="intro/normal_search_start.png"></image>
+				</div>
+				
+				<div id="p8" style="display:none;width:100%;height:90%;">
+					<image style="width:100%" src="intro/normal_search.png"></image>
+				</div>
+				
+				
+				<div type="button" class = "log_n_register bme" style="position: absolute; right: 0; bottom: 0;" onclick="close_sub_win('welcome_page')">
+				Close
+				</div>
+			
+					
+					
+			
+		
+			
+		
+			
+
+			</div>
+
+
+			
+			
+			
+		<div id="page_1" style="display:block;">
+			
+			<div class="top_bar" >
+		
+
+				<div id="tr_button_area">  <!-------------------------------login area & emergency law button!-->
+					<div style="15rem; margin:0px;padding:0px;">
+					
+						<div  onclick="open_page('Register')" id="top_bar_1" class="top_bar_button bme">
+						Register
+						</div>
+						
+						<div  onclick="open_page('Login')" id="top_bar_2" class="top_bar_button bme">
+						Log In
+						</div>
+						
+
+						
+						<div onclick="log_out()" id="top_bar_3" class="top_bar_button bme" style="display:none">
+						Log Out
+						</div>
+						
+						<div id="my_page" class="top_bar_button bme" onclick="open_page('d_my_page')">
+						My Page
+						</div>
+					</div>
+					<!--emergency buttom-->
+					
+					
+				</div>	
+
+			
+			</div>
+			
+			<div id="page_1_middle"> <!--logo, emergency buttom-->
+				<div id="page_1_left" style="width:100%; height:90%; text-align:center; float:left;">
+					<div><image src="elex-logo2.png"></image></div>
+											
+							<i class="E_buttom bme" onclick="open_page('Emergency_page')" role="button">
+							Emergency
+							</i>
+							<br>
+							<i><image src="search_icon.png" role="button" class="bme"></image>
+						
+					
+					
+				
+				</div>
+				<!--
+				<div id="page_1_right" style="height: 90%; background-color:green; display:block;"> 
+					
+					<div style="width: 35rem; float:left;text-align:center;background-color:green; ">
+					<h3>How it works</h3>
+					<p><strong>1 </strong>Gives Info to X Lawyers.</p>
+					<p><strong>2 </strong>Lawyers Gives Out Offer.</p>
+					<p><strong>3 </strong>View and Contract Lawyers.</p>
+					<p><strong>4 </strong>Make a Deal.</p>
+					<p><strong>5 </strong>Track Progress.</p>
+					</div>
+				</div>
+				-->
+			</div>
+			
+			<div id="page_1_bottom_bar" class="bottom_bar" style="position:absolute; bottom:10;">
+			<!--for contact, all other info that displayed on other sites-->
+				<div class="bottom_bar_info bme">
+					Help
+				</div>
+				
+				<div class="bottom_bar_info bme">
+					Send Feedback
+				</div>
+				
+				<div class="bottom_bar_info bme">
+					Privacy
+				</div>
+				
+				<div class="bottom_bar_info bme">
+					About Us
+				</div>
+				
+				<div class="bottom_bar_info bme">
+					Join Us
+				</div>
+			
+				<div class="Copy_right_text no_effect" >
+					eLex<sup style="font-size:0.6em; ">TM</sup>. All Right Reserved 2017.
+				</div>
+			</div>
+			
+			
+		</div>
+	
+	
+	
+	
+	
+	<div id="page_2" style="display:none;">
+
+			
+		<!--main divisions ------------------------------------------------------------------------------------------------------------------------>
+			
+			
+
+		
+		<div class="top_bar">
+		
+			<div class="logol">        <!--------------------------------------------------logo-->
+				<image id="top_bar_logo" src="elex-logo2.png"></image>
+			</div>
+			
+			<div id="search_area">    <!----------------------------------------------------------------------------------------------------------search bar-->
+
+				<input class="search_box no_text_box_effect" placeholder="Please enter your the key words. (e.g. SPA, Chicago, Contract)"></input>
+				<div type="button" class="bme" id="search_buttom" ><img id="search_icon" src="search_icon.png"></div>
+			</div>
+		
+			
+			<div id="tr_button_area">  <!-------------------------------login area & emergency law button!-->
+				<div style="15rem; margin:0px;padding:0px;">
+				
+					<div  onclick="open_page('Register')" id="top_bar_1" class="top_bar_button bme">
+					Register
+					</div>
+					
+					<div  onclick="open_page('Login')" id="top_bar_2" class="top_bar_button bme">
+					Log In
+					</div>
+					
+
+					
+					<div onclick="log_out()" id="top_bar_3" class="top_bar_button bme" style="display:none">
+					Log Out
+					</div>
+					
+					<div id="my_page" class="top_bar_button bme" onclick="open_page('d_my_page')">
+					My Page
+					</div>
+				</div>
+				<!--emergency buttom-->
+				<div role="button" onclick="open_page('Emergency_page')" class="bme E_buttom">
+					Emergency
+				</div>
+				
+			</div>	
+
+			
+		</div>
+		
+
+			
+		<div id="key_words">
+				
+				<div style="margin-left: 3rem;width:100%;margin-top:10px;padding: 5px;">
+					Recommended Key Words.
+				</div>
+				
+				<div id="key_words_info">
+					<div class="kw_info_tag" role="button" onclick="">Start-ups</div>
+					<div class="kw_info_tag">Founder's Agreement</div>
+					<div class="kw_info_tag">Transaction</div>
+					<div class="kw_info_tag">License</div>
+					<div class="kw_info_tag">Securities</div>
+					<div class="kw_info_tag">Real Estate Lease</div>
+					<div class="kw_info_tag">Employer/employee agreements</div>
+				</div>
+				
+				
+		</div>
+		
+
+
+			<div id="result_area">
+
+				
+				<!-- Photo, name, availbility, hour rate, area, tags,-->
+				<!--can click on to display more qualitative info, discription, time table, review-->
+				<div id="lawyer_brief_area">
+					<div class="lawyer_brief be_opacity" id="show_lawyer_info_button_1">
+
+									<div class="lawyer_photo_div lb_b" >
+										<image class="photo_img" src="lawyer_info/DG.jpg"></image>
+									</div>
+									
+									<div class="lb_b lb_name">
+										<div id="lawyer_name_1"class="lawyer_name">Darran Green</div>
+										<span class="current_law_firm" id="current_law_firm_1">Solo Practician</span>
+									</div>
+									
+									<div class="availbility_online lb_b">               <!---------------------------availbility-->
+										<div class="availibity_online_sub">
+										</div>
+									
+										online
+										
+									</div>
+									
+									<div class="Average_Hourly_Rate lb_b">
+										<div class="lb_title"> Hourly Rate</div><br>
+										<div id="hourly_rate_1" class="lb_info">$250~350</div>
+									</div>
+								
+									<div class="Main_Practice_Area lb_b">
+										<div class="lb_title">Main Practice Area</div><br>
+										<span id="Main_practice_Area_1" class="lb_info">Legal Counsel</span>
+									</div>
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Language</div><br>
+										<span id="Language_1" class="lb_info">English</span>
+						
+									</div>
+								
+									
+									<div class="lb_tag_box">
+											<div id="lb_tag_1_1" class="lb_tag_info">Quick Response</div>
+											<div id="lb_tag_1_4" class="lb_tag_info">Professional</div>
+											<div id="lb_tag_1_2" class="lb_tag_info">Entrepreneur Friendly</div>
+											<div id="lb_tag_1_3" class="lb_tag_info">Rich in Experience</div>	
+											<div id="lb_tag_1_4" class="lb_tag_info">Chicago</div>										
+									</div>
+
+										
+					</div>
+				
+					
+					<div class="lawyer_brief" id="show_lawyer_info_button_2">
+						
+									<div class="lawyer_photo_div lb_b" >
+										<image class="photo_img" src="lawyer_info/l2.png"></image>
+									</div>
+									
+									<div class="lb_b lb_name">
+										<div id="lawyer_name_1"class="lawyer_name">Kristeen Andersen</div>
+										<span class="current_law_firm" id="current_law_firm_1">Kristi & John LLC</span>
+									</div>
+									
+									<div class="availbility_online lb_b">               <!---------------------------availbility-->
+										<div class="availibity_online_sub">
+										</div>
+									
+										online
+										
+									</div>
+									
+									<div class="Average_Hourly_Rate lb_b">
+										<div class="lb_title"> Hourly Rate</div><br>
+										<div id="hourly_rate_1" class="lb_info">$140~250</div>
+									</div>
+								
+									<div class="Main_Practice_Area lb_b">
+										<div class="lb_title">Main Practice Area</div><br>
+										<span id="Main_practice_Area_1" class="lb_info">Legal Counsel</span>
+									</div>
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Language</div><br>
+										<span id="Language_1" class="lb_info">English</span>
+						
+									</div>
+								
+									
+									<div class="lb_tag_box">
+											<div id="lb_tag_1_1" class="lb_tag_info">Northwestern</div>
+											<div id="lb_tag_1_4" class="lb_tag_info">Professional</div>
+											<div id="lb_tag_1_3" class="lb_tag_info">7 years Experience</div>	
+								
+									</div>
+					
+					</div>
+					<div class="lawyer_brief" id="show_lawyer_info_button_3">
+						
+									<div class="lawyer_photo_div lb_b" >
+										<image class="photo_img" src="lawyer_info/l3.png"></image>
+									</div>
+									
+									<div class="lb_b lb_name">
+										<div id="lawyer_name_1"class="lawyer_name">David Webber</div>
+										<span class="current_law_firm" id="current_law_firm_1">Webber LLC</span>
+									</div>
+									
+									<div class="availbility_online lb_b">               <!---------------------------availbility-->
+										<div class="availibity_online_sub">
+										</div>
+									
+										online
+										
+									</div>
+									
+									<div class="Average_Hourly_Rate lb_b">
+										<div class="lb_title"> Hourly Rate</div><br>
+										<div id="hourly_rate_1" class="lb_info">$500~600</div>
+									</div>
+								
+									<div class="Main_Practice_Area lb_b">
+										<div class="lb_title">Main Practice Area</div><br>
+										<span id="Main_practice_Area_1" class="lb_info">Litigation</span>
+									</div>
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Language</div><br>
+										<span id="Language_1" class="lb_info">English</span>
+						
+									</div>
+								
+									
+									<div class="lb_tag_box">
+											<div id="lb_tag_1_1" class="lb_tag_info">Friendly</div>
+											<div id="lb_tag_1_4" class="lb_tag_info">Professional</div>
+										
+
+											<div id="lb_tag_1_4" class="lb_tag_info">Harvard</div>										
+									</div>
+					
+					</div>
+					<div class="lawyer_brief" id="show_lawyer_info_button_4">
+						
+									<div class="lawyer_photo_div lb_b" >
+										<image class="photo_img" src="lawyer_info/l4.png"></image>
+									</div>
+									
+									<div class="lb_b lb_name">
+										<div id="lawyer_name_1"class="lawyer_name">Laurie Gold</div>
+										<span class="current_law_firm" id="current_law_firm_1">Kristi & John LLC</span>
+									</div>
+									
+									<div class="availbility_online lb_b">               <!---------------------------availbility-->
+										<div class="availibity_online_sub">
+										</div>
+									
+										online
+										
+									</div>
+									
+									<div class="Average_Hourly_Rate lb_b">
+										<div class="lb_title"> Hourly Rate</div><br>
+										<div id="hourly_rate_1" class="lb_info">$200~300</div>
+									</div>
+								
+									<div class="Main_Practice_Area lb_b">
+										<div class="lb_title">Main Practice Area</div><br>
+										<span id="Main_practice_Area_1" class="lb_info">bankruptcy</span>
+									</div>
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Language</div><br>
+										<span id="Language_1" class="lb_info">English</span>
+										<span id="Language_1" class="lb_info">France</span>
+						
+									</div>
+								
+									
+									<div class="lb_tag_box">
+										<div id="lb_tag_1_3" class="lb_tag_info">10 years Experience</div>	
+											<div id="lb_tag_1_1" class="lb_tag_info">Quick Response</div>
+											<div id="lb_tag_1_4" class="lb_tag_info">John Marshall</div>
+
+											
+											<div id="lb_tag_1_4" class="lb_tag_info">Chicago</div>										
+									</div>
+					
+					</div>
+					<div class="lawyer_brief" id="show_lawyer_info_button_5"> 
+						
+									<div class="lawyer_photo_div lb_b" >
+										<image class="photo_img" src="lawyer_info/l5.png"></image>
+									</div>
+									
+									<div class="lb_b lb_name">
+										<div id="lawyer_name_1"class="lawyer_name">Ram Kumar Shetty</div>
+										<span class="current_law_firm" id="current_law_firm_1">Kristi & John LLC</span>
+									</div>
+									
+									<div class="availbility_online lb_b">               <!---------------------------availbility-->
+										<div class="availibity_online_sub">
+										</div>
+									
+										online
+										
+									</div>
+									
+									<div class="Average_Hourly_Rate lb_b">
+										<div class="lb_title"> Hourly Rate</div><br>
+										<div id="hourly_rate_1" class="lb_info">$220~320</div>
+									</div>
+								
+									<div class="Main_Practice_Area lb_b">
+										<div class="lb_title">Main Practice Area</div><br>
+										<span id="Main_practice_Area_1" class="lb_info">Legal Counsel</span>
+									</div>
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Language</div><br>
+										<span id="Language_1" class="lb_info">English</span>
+										<span id="Language_1" class="lb_info">Hindi</span>
+						
+									</div>
+								
+									
+									<div class="lb_tag_box">
+											<div id="lb_tag_1_1" class="lb_tag_info">Quick Response</div>
+						
+											<div id="lb_tag_1_3" class="lb_tag_info">Rich in Experience</div>	
+											<div id="lb_tag_1_4" class="lb_tag_info">Chicago</div>										
+									</div>
+					</div>
+					
+					<div class="lawyer_brief" id="show_lawyer_info_button_6">
+						
+									<div class="lawyer_photo_div lb_b" >
+										<image class="photo_img" src="lawyer_info/l6.png"></image>
+									</div>
+									
+									<div class="lb_b lb_name">
+										<div id="lawyer_name_1"class="lawyer_name">Brandon Neil</div>
+										<span class="current_law_firm" id="current_law_firm_1">Webber LLC</span>
+									</div>
+									
+									<div class="availbility_online lb_b">               <!---------------------------availbility-->
+										<div class="availibity_online_sub">
+										</div>
+									
+										online
+										
+									</div>
+									
+									<div class="Average_Hourly_Rate lb_b">
+										<div class="lb_title"> Hourly Rate</div><br>
+										<div id="hourly_rate_1" class="lb_info">$250~350</div>
+									</div>
+								
+									<div class="Main_Practice_Area lb_b">
+										<div class="lb_title">Main Practice Area</div><br>
+										<span id="Main_practice_Area_1" class="lb_info">Immigration</span>
+									</div>
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Language</div><br>
+										<span id="Language_1" class="lb_info">English</span>
+										<span id="Language_1" class="lb_info">Chinese</span>
+						
+									</div>
+								
+									
+									<div class="lb_tag_box">
+											<div id="lb_tag_1_1" class="lb_tag_info">Loyola</div>
+											<div id="lb_tag_1_4" class="lb_tag_info">Professional</div>
+											<div id="lb_tag_1_2" class="lb_tag_info">Fluent in Chinese</div>
+											
+																				
+									</div>
+					</div>
+					
+				
+				</div>
+				
+				<div id="lawyer_detail_area">
+					<div id="ld_ff_1" class="ld_inner_div" style="display:block; ">
+						<h3 style="text-align:center;">What to Ask When Interviewing Attorneys</h3>
+						<p><strong>Are you experienced?</strong>Don't be afraid to ask direct questions about a lawyer's experience. If you know you want to incorporate your business, for example, ask if he or she has ever handled an incorporation. </p>
+						<p><span class="ff_quick_header">Are you well-connected? </span> Your business attorney should be something of a legal "internist"--one who can diagnose your problem, perform any "minor surgery" that may be needed, and refer you to local specialists for "major surgery" if needed.  </p>
+						<p><span class="ff_quick_header">Do you have other clients in my industry? </span>Your attorney should be somewhat familiar with your industry and its legal environment. If not, he or she should be willing to learn the ins and outs of it. Scan your candidate's bookshelf or magazine rack for copies of the same journals and professional literature that you read.  </p>
+						<p><span class="ff_quick_header">Are you a good teacher?  </span> Your attorney should be willing to take the time to educate you and your staff about the legal environment of your business. He or she should tell you what the law says and explain how it affects the way you do business so that you can spot problems well in advance.  </p>
+						<p><span class="ff_quick_header">Are you a finder, a minder or a grinder?  </span> Nearly every law firm has three types of lawyer. The "finder" scouts for business and brings in new clients; the "minder" takes on new clients and makes sure existing ones are happy; the "grinder" does the clients' work. Your attorney should be a combination of a "minder" and a "grinder."  </p>
+						<p><span class="ff_quick_header">Will you be flexible in your billing? </span> Because there is currently a "glut" of lawyers, with far too many practicing in most geographic locales, lawyers are in a position to have to negotiate their fees as never before, and it is definitely a "buyer's market."  </p>
+						<p style="text-align:center;">https://www.entrepreneur.com/article/58326</p>
+					
+					</div>
+					
+					<div id="ld_ff_2" class="ld_inner_div" style="display:none;">
+					<h3 style="text-align:center;">Questions to Ask Yourself Before Hiring an Attorney  </h3>
+						<p><span class="ff_quick_header">Is this person really a frustrated businessperson disguised as a lawyer?  </span> Some lawyers get tired of being on the outside looking in when it comes to business dealings. Such a lawyer may attempt to second-guess your business judgment. Be wary of a lawyer who takes too keen an interest in the nonlegal aspects of your work. </p>
+						<p><span class="ff_quick_header">Does this person communicate well? </span> J. P. Morgan once said, "I do not pay my lawyers to tell me what I cannot do, but to tell me how to do what I want to do." The right lawyer for your business will not respond to your questions with a simple "That's OK" or "No, you can't do that," but will outline all your available options and tell you what other businesses in your situation normally do. </p>
+						<p><span class="ff_quick_header"> Are the offices conveniently located?  </span> You will need to visit your attorney frequently, especially in your first few years in business. You should not have to waste a day traveling to and from the nearest city each time you need legal advice. When in doubt, choose a lawyer close to home. </p>
+						<p><span class="ff_quick_header">Do I like this person?  </span> Don't forget to follow your instincts and feelings. You should be able to communicate openly and freely with your attorney at all times. If you feel you cannot trust a particular lawyer or you believe the two of you have different perspectives, keep looking. Just remember that Ally McBeal is not reality </p>
+						<p style="text-align:center;">https://www.entrepreneur.com/article/58326</p>							
+					</div>
+					
+					<!-------------------------------------------------------------------info depends on which to click on,-->
+					<!-- photo, name, online/offline brief discription, resume, time table, review, contact -->
+					<div id="ld_info_1" class="ld_inner_div" style="display:none;">
+					
+						<div id="briefing" style="width:100%;float:left;"> <!-- pic, name, practice, availbility, location, -->
+							<div id="ld_photo_1" style="float:left; margin:1rem;"><image style="height:7rem;" src="lawyer_info/DG.jpg"></image></div>
+							<div style="float:left;">
+										<div style="" class="lawyer_name">
+											<div style="float:left; display:inline-block;font-size:2em;font-weight:bold;">Darran Green</div>
+
+												<div class="availibity_online_sub" style="float:left; display:inline-block; margin:0rem;margin-left:1rem;margin-right:0.5rem; margin-top: 1rem;">	</div>
+												<div style="float:left; display:inline-block; margin-top: 1rem;">online</div>
+											
+										
+										</div>
+										<br>
+										<br>
+										<div style="margin-top:0.5rem;"> Solo practician for Startup and Entrepreneur <br> Faculty at Northwestern Pritzker School of Law. </div>
+										
+										
+										<div style="margin-top:0.5rem;"> Practice Area: Chicago</div>
+							</div>
+						</div>
+						
+						<div id="ld_info_discription_1">
+						<h3> Discription</h3>
+						Entrepreneurs, early-stage investors and start-up businesses seeking sophisticated and attentive legal counsel finally have viable options outside of large corporate law firms.  Mr. Green combines years of training within a large national law firm and subsequent experience as the sole in-house counsel to a highly-successful technology company with over 12 years of representing innovative entrepreneurs and investors as a sole practitioner to deliver real value to his clients.  
+						</div>
+																			
+						<div id="time_table_1">
+							<h3> Bookable Time</h3>
+							<image style="width: 28rem;" src="empty_time_table.png"></image>				
+						</div>
+						
+						<div style="width:100%;" id="contact_1">
+							<h3> Contact </h3>
+						
+							<div style="display:inline-block; margin-left:0.5rem; margin-right: 2rem;" ><!--for call or message icon-->
+								<div class="call_button bme"><image style="width:3rem;" src="call.jpg"></image></div>
+								<div class="message_button bme"><image style="width:3rem;" src="message.jpg"></image></div>
+							</div>
+							
+							<div style="display:inline-block;"  >
+								Office 847.205.0977<br>  Fax 847.205.0993<br>  E-mail dgreen@dgattorney.com<br>  Skype dmgreen11<br>http://www.dgattorney.com
+							</div>
+						
+						</div>
+						
+						<br>
+						
+						
+						<div id="ld_info_review_1" style="display:block;">
+						<h3> Reviews</h3>
+							<div style="width:100%;float:left;"> <!-- pic, name, practice, availbility, location, -->
+							<div style="float:left; margin:1rem;"><image class="photo_img" src="review.jpg"></image></div>
+							<div style="float:left;">
+										<div class="lawyer_name">
+											<div style="float:left; display:inline-block;font-size:2em;font-weight:bold;">Yumin Deng</div>
+												<br><br>
+												<div style="display:inline-block; margin-top: 0.5rem;">Relationship: student.</div>
+										</div>
+										<br>
+										
+							</div>
+							</div>
+							<div style="margin-top:0.5rem; margin-left:2rem;"> Darran is a very nice professor. I took his class on Venture Capital and had some office hours about a competion called Startup Lawmeet. I enjoyed listening to interesting stories he told about the VC and startups. These gaved me a better idea of what I should do for my future startup. 
+							</div>
+						</div>
+						
+					</div>
+						
+						
+					
+				</div>
+				
+
+			</div>
+		
+
+		<div class="bottom_bar">
+		<!--for contact, all other info that displayed on other sites-->
+			<div class="bottom_bar_info bme">
+				Help
+			</div>
+			
+			<div class="bottom_bar_info bme">
+				Send Feedback
+			</div>
+			
+			<div class="bottom_bar_info bme">
+				Privacy
+			</div>
+			
+			<div class="bottom_bar_info bme">
+				About Us
+			</div>
+			
+			<div class="bottom_bar_info bme">
+				Join Us
+			</div>
+		
+			<div class="Copy_right_text no_effect" >
+				eLex<sup style="font-size:0.6em; ">TM</sup>. All Right Reserved 2017.
+			</div>
+		</div>
+	</div>
+
+	
+	<!-----------------------------------------------------------------------------------------------------------------------------page 3, for displaying bits------>
+	<div id="page_3" style="display:none;">
+
+			
+
+		
+		<div class="top_bar">
+		
+			<div class="logol">        <!--------------------------------------------------logo-->
+				<image id="top_bar_logo" src="elex-logo2.png"></image>
+			</div>
+			
+			
+		
+			
+			<div id="tr_button_area">  <!-------------------------------login area & emergency law button!-->
+				<div style="15rem; margin:0px;padding:0px;">
+				
+					<div  onclick="open_page('Register')" id="top_bar_1" class="top_bar_button bme">
+					Register
+					</div>
+					
+					<div  onclick="open_page('Login')" id="top_bar_2" class="top_bar_button bme">
+					Log In
+					</div>
+					
+
+					
+					<div onclick="log_out()" id="top_bar_3" class="top_bar_button bme" style="display:none">
+					Log Out
+					</div>
+					
+					<div id="my_page" class="top_bar_button bme" onclick="open_page('d_my_page')">
+					My Page
+					</div>
+				</div>
+				<!--emergency buttom-->
+				<div role="button" onclick="open_page('Emergency_page')" class="bme E_buttom">
+					Emergency
+				</div>
+				
+			</div>	
+
+			
+		</div>
+		
+
+			
+		<div id="key_words">
+				
+				<div style="margin-left: 3rem;width:100%;margin-top:10px;padding: 5px; font-size: 30px; font-weight:bold; color:#5f6268;">
+					Your Offers For: Case 2.
+				</div>
+				
+				
+				
+				
+				
+		</div>
+		
+
+
+			<div id="result_area">
+
+				
+				<!-- Photo, name, availbility, hour rate, area, tags,-->
+				<!--can click on to display more qualitative info, discription, time table, review-->
+				<div id="lawyer_brief_area">
+					<div class="lawyer_brief be_opacity" id="show_lawyer_info_button_1">
+
+									<div class="lawyer_photo_div lb_b" >
+										<image class="photo_img" src="lawyer_info/DG.jpg"></image>
+									</div>
+									
+									<div class="lb_b lb_name">
+										<div id="lawyer_name_1"class="lawyer_name">Darran Green</div>
+										<span class="current_law_firm" id="current_law_firm_1">Solo Practician</span>
+									</div>
+									
+									<div class="availbility_online lb_b">               <!---------------------------availbility-->
+										<div class="availibity_online_sub">
+										</div>
+									
+										Offer
+										
+									</div>
+									
+									<div class="Average_Hourly_Rate lb_b">
+										<div class="lb_title"> Hourly Rate</div><br>
+										<div id="hourly_rate_1" class="lb_info">$250</div>
+									</div>
+								
+									<div class="Main_Practice_Area lb_b">
+										<div class="lb_title">Expected Hours</div><br>
+										<span id="Main_practice_Area_1" class="lb_info">1</span>
+									</div>
+									
+								
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Other Expenses</div><br>
+										<span id="Language_1" class="lb_info">$500</span>
+						
+									</div>
+								
+									<div class="Language lb_b">
+										<div class="lb_title">Flat Fee Offer</div><br>
+										<span id="Language_1" class="lb_info">Yes</span>
+						
+									</div>
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Total Charge</div><br>
+										<span id="Language_1" class="lb_info">$750</span>
+						
+									</div>
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Retainer</div><br>
+										<span id="Language_1" class="lb_info">/</span>
+						
+									</div>
+
+										
+					</div>
+				
+					
+					<div class="lawyer_brief" id="show_lawyer_info_button_2">
+						
+									<div class="lawyer_photo_div lb_b" >
+										<image class="photo_img" src="lawyer_info/l2.png"></image>
+									</div>
+									
+									<div class="lb_b lb_name">
+										<div id="lawyer_name_1"class="lawyer_name">Kristeen Andersen</div>
+										<span class="current_law_firm" id="current_law_firm_1">Kristi & John LLC</span>
+									</div>
+									
+									<div class="availbility_online lb_b">               <!---------------------------availbility-->
+										<div class="availibity_online_sub">
+										</div>
+									
+										Offer
+										
+									</div>
+									
+									<div class="Average_Hourly_Rate lb_b">
+										<div class="lb_title"> Hourly Rate</div><br>
+										<div id="hourly_rate_1" class="lb_info">$150</div>
+									</div>
+								
+									<div class="Main_Practice_Area lb_b">
+										<div class="lb_title">Expected Hours</div><br>
+										<span id="Main_practice_Area_1" class="lb_info">1.5~3</span>
+									</div>
+									
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Other Expenses</div><br>
+										<span id="Language_1" class="lb_info">$500</span>
+						
+									</div>
+								
+									<div class="Language lb_b">
+										<div class="lb_title">Flat Fee Offer</div><br>
+										<span id="Language_1" class="lb_info">No</span>
+						
+									</div>
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Total Charge</div><br>
+										<span id="Language_1" class="lb_info">$725~950</span>
+						
+									</div>
+									
+									<div class="Language lb_b">
+										<div class="lb_title">Retainer</div><br>
+										<span id="Language_1" class="lb_info">$200</span>
+						
+									</div>
+									
+									
+					
+					</div>
+					<div class="lawyer_brief" id="show_lawyer_info_button_3">
+						
+									<div class="lawyer_photo_div lb_b" >
+										<image class="photo_img" src="lawyer_info/l3.png"></image>
+									</div>
+									
+									<div class="lb_b lb_name">
+										<div id="lawyer_name_1"class="lawyer_name">David Webber</div>
+										<span class="current_law_firm" id="current_law_firm_1">Webber LLC</span>
+									</div>
+									
+									<div class="availbility_online lb_b">               <!---------------------------availbility-->
+										<div class="availibity_offline_sub">
+										</div>
+									
+										No Offer
+										
+									</div>
+									
+									<div class="Average_Hourly_Rate lb_b">
+										<div class="lb_title"> Note</div><br>
+										<div id="hourly_rate_1" class="lb_info">Dead line too tight. Cannot finish on time. </div>
+									</div>
+								
+									
+					
+					</div>
+
+					
+				
+				</div>
+				
+				<div id="lawyer_detail_area">
+										
+					<div id="ld_ff_2" class="ld_inner_div" style="display:none;">
+					<h3 style="text-align:center;">Questions to Ask Yourself Before Hiring an Attorney  </h3>
+						<p><span class="ff_quick_header">Is this person really a frustrated businessperson disguised as a lawyer?  </span> Some lawyers get tired of being on the outside looking in when it comes to business dealings. Such a lawyer may attempt to second-guess your business judgment. Be wary of a lawyer who takes too keen an interest in the nonlegal aspects of your work. </p>
+						<p><span class="ff_quick_header">Does this person communicate well? </span> J. P. Morgan once said, "I do not pay my lawyers to tell me what I cannot do, but to tell me how to do what I want to do." The right lawyer for your business will not respond to your questions with a simple "That's OK" or "No, you can't do that," but will outline all your available options and tell you what other businesses in your situation normally do. </p>
+						<p><span class="ff_quick_header"> Are the offices conveniently located?  </span> You will need to visit your attorney frequently, especially in your first few years in business. You should not have to waste a day traveling to and from the nearest city each time you need legal advice. When in doubt, choose a lawyer close to home. </p>
+						<p><span class="ff_quick_header">Do I like this person?  </span> Don't forget to follow your instincts and feelings. You should be able to communicate openly and freely with your attorney at all times. If you feel you cannot trust a particular lawyer or you believe the two of you have different perspectives, keep looking. Just remember that Ally McBeal is not reality </p>
+						<p style="text-align:center;">https://www.entrepreneur.com/article/58326</p>							
+					</div>
+					
+					<!-------------------------------------------------------------------info depends on which to click on,-->
+					<!-- photo, name, online/offline brief discription, resume, time table, review, contact -->
+					<div id="ld_info_1" class="ld_inner_div" style="display:block;">
+					
+						<div id="briefing" style="width:100%;float:left;"> <!-- pic, name, practice, availbility, location, -->
+							<div id="ld_photo_1" style="float:left; margin:1rem;"><image style="height:7rem;" src="lawyer_info/DG.jpg"></image></div>
+							<div style="float:left;">
+										<div style="" class="lawyer_name">
+											<div style="float:left; display:inline-block;font-size:2em;font-weight:bold; margin-right: 0.1rem;">Darran Green</div>
+
+												<div class="a_d_button" style="background-color: #49f496">Accept Deal</div>
+												<div class="a_d_button" style="background-color: #f9735e">Decline</div>
+											
+										
+										</div>
+										<br>
+										<br>
+										<div style="margin-top:0.5rem;"> Solo practician for Startup and Entrepreneur <br> Faculty at Northwestern Pritzker School of Law. </div>
+										
+										
+										<div style="margin-top:0.5rem;"> Main Area: Chicago</div>
+							</div>
+						</div>
+						
+						<div id="ld_info_discription_1">
+						<h3> Discription</h3>
+						Entrepreneurs, early-stage investors and start-up businesses seeking sophisticated and attentive legal counsel finally have viable options outside of large corporate law firms.  Mr. Green combines years of training within a large national law firm and subsequent experience as the sole in-house counsel to a highly-successful technology company with over 12 years of representing innovative entrepreneurs and investors as a sole practitioner to deliver real value to his clients.  
+						</div>
+																			
+						<div style="background-color:#d6d1d3; border-radius: 5px;">
+							<h3> Note for the Offer</h3>
+							Document can be filed and submited tomorrow morning. I recommend you to to plan for 2 weeks extra time for your case to be progressed.
+						</div>
+						
+						<div style="width:100%;" id="contact_1">
+							<h3> Contact </h3>
+						
+							<div style="display:inline-block; margin-left:0.5rem; margin-right: 2rem;" ><!--for call or message icon-->
+								<div class="call_button bme"><image style="width:3rem;" src="call.jpg"></image></div>
+								<div class="message_button bme"><image style="width:3rem;" src="message.jpg"></image></div>
+							</div>
+							
+							<div style="display:inline-block;"  >
+								Office 847.205.0977<br>  Fax 847.205.0993<br>  E-mail dgreen@dgattorney.com<br>  Skype dmgreen11<br>http://www.dgattorney.com
+							</div>
+						
+						</div>
+						
+						<br>
+						
+						
+						<div id="ld_info_review_1" style="display:block;">
+						<h3> Reviews</h3>
+							<div style="width:100%;float:left;"> <!-- pic, name, practice, availbility, location, -->
+							<div style="float:left; margin:1rem;"><image class="photo_img" src="review.jpg"></image></div>
+							<div style="float:left;">
+										<div class="lawyer_name">
+											<div style="float:left; display:inline-block;font-size:2em;font-weight:bold;">Yumin Deng</div>
+												<br><br>
+												<div style="display:inline-block; margin-top: 0.5rem;">Relationship: student.</div>
+										</div>
+										<br>
+										
+							</div>
+							</div>
+							<div style="margin-top:0.5rem; margin-left:2rem;"> Darran is a very nice professor. I took his class on Venture Capital and had some office hours about a competion called Startup Lawmeet. I enjoyed listening to interesting stories he told about the VC and startups. These gaved me a better idea of what I should do for my future startup. 
+							</div>
+						</div>
+						
+					</div>
+						
+						
+					
+				</div>
+				
+
+			</div>
+		
+
+		<div class="bottom_bar">
+		<!--for contact, all other info that displayed on other sites-->
+			<div class="bottom_bar_info bme">
+				Help
+			</div>
+			
+			<div class="bottom_bar_info bme">
+				Send Feedback
+			</div>
+			
+			<div class="bottom_bar_info bme">
+				Privacy
+			</div>
+			
+			<div class="bottom_bar_info bme">
+				About Us
+			</div>
+			
+			<div class="bottom_bar_info bme">
+				Join Us
+			</div>
+		
+			<div class="Copy_right_text no_effect" >
+				eLex<sup style="font-size:0.6em; ">TM</sup>. All Right Reserved 2017.
+			</div>
+		</div>
+	</div>
+	
+
+	</body>
+	
+	
+	
+	<script>
+		
+		//document.getElementsByClassName("log_n_register").onclick = function(){test2()};
+		//document.getElementById("save_info_save").onclick= function(){test1()};
+		
+		//get log in variable store in local variable.
+		
+
+
+		
+		
+	
+		
+		
+
+	
+
+	</script>
+	
+	
+</html>

@@ -1,0 +1,177 @@
+/* buttons*/
+
+.cbb{
+/*collection bar button*/	
+margin: 5px;
+}
+
+
+#search_buttom{	
+float:right;
+height:2.5rem;
+width: 2.5rem;
+font-size:1.5rem;
+}
+
+#search_buttom:hover{
+	background-color: #f2dada;
+}
+
+.log_n_register{
+	background-color: white;
+	color:#ff77e3;
+	float: right;
+	margin-bottom: 5px;
+	width: 8rem;
+
+	border-radius: 2px;
+	text-align:center;
+	
+	
+}
+.log_n_register:hover {
+	background-color: #effbff;
+}
+
+.top_bar_button{
+	position: relative;
+	float:right;
+	width: 4.5rem;
+	padding:2px; margin:0px;
+	background-color:white;
+	color:black;
+	text-align:center;
+	transition: background-color 200ms ease-out, color 200ms ease-out;
+}
+
+.top_bar_button:hover {
+	background-color: green;
+	color: white;
+}
+
+.E_buttom{
+	/* ********************************************Emergency buttom*/
+	width:14rem;
+	height: 3.5rem;
+	background-color:red;
+	border-radius: 10px;
+	border: 3px solid black;
+	text-align:center;
+	font-size: 3rem;
+	font-weight:bold;
+	padding: 0.5rem;
+	margin-top:0.5rem;
+	margin-bottom:2rem;
+	transition: opacity 500ms;
+}
+
+.E_buttom:hover{
+	opacity: 0.8;
+	color:white;
+	border: 3px solid white;
+}
+
+.Emergency {
+	background-color:red;
+	
+	height:3.5rem;
+}
+
+#test{
+	position: absolute;
+	display:block;
+	bottom:5px;
+	right:0px;
+	float:right;
+
+}
+	
+
+.close_win_X{
+width: 1rem;
+height:1rem;	
+float:right;
+}
+
+.first_time_user_ln{
+	background-color: #a49ef0;
+
+	margin-left:4rem;
+
+	text-align:center;
+	width: 28rem;
+	height: 2rem;
+	font-weight:bold;
+	border-radius: 10px;
+}
+
+.a_d_button {
+	float:left; display:inline-block; margin-top: 0.5rem; font-size: 18px; 
+	border-radius:12px;
+	border: 2px solid white;
+	padding:2px;
+	transition: all 0.5s;
+	
+}
+
+.a_d_button:Hover {
+	font-weight:bold;
+	border: 2px solid #7aadff;
+}
+
+
+/***************************************************************keywords bar**************/
+#key_words_info {
+	position:relative;
+	margin-left: 1rem;
+}
+
+.kw_info_tag {
+	position:relative;
+	display:inline-block;
+    margin: 0 10px 8px 0;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0 10px;
+    position: relative;
+    height: 22px;
+    transition: all .3s;
+	text-decoration: none;
+	cursor:pointer;
+}
+
+.kw_info_tag:hover {
+	background-color:white;
+}
+
+.mypage_button {
+	Padding-top:1rem;
+	Padding-bottom:1rem;
+	margin-left: 3rem;
+	text-align: center;
+	width: 8rem;
+
+	font-size: 1.5em;
+	font-weight:bold;
+	display:inline-block;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin-top: 10px;
+	transition: all 0.3s linear;
+}
+.mypage_button:hover {
+	background-color: #ffb30f;
+	color:white;
+}
+
+/*
+#my_page {
+
+	background-color: red;
+	float: right;
+	text-align:center;
+	width: 5rem;
+	height: 2rem;
+	font-weight:bold;
+	border-radius: 10px;
+}*/

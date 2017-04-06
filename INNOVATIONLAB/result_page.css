@@ -1,0 +1,137 @@
+/***************************************************************result area******/
+#result_area {
+	display:flex;
+	
+	padding: 1rem;
+	/*background-color:#faf4ff;*/
+	z-index:11;
+	
+	margin-left:auto;
+	margin-right:auto;
+	width: 87rem;
+
+	border-style: outset;
+	
+}
+
+.lawyer_brief {
+	
+	border-radius: 10px;
+	width: 49rem;
+	left: 10rem;
+	height: 5rem;
+	background-color: white;
+	margin: 1rem;
+	border-style: outset;
+	cursor:pointer;
+}
+/*basic of smaller divisions*/
+.lb_b{
+		margin:0.3rem;
+		height:4rem;
+		float: left;
+		display: inline-block;
+		text-align:center;
+		display: table-cell;
+}
+
+.lb_name{
+	width:7.5rem;
+}
+
+.lawyer_photo_div {
+	float:left;
+	display:block-inline;
+	margin:0.5rem;
+}
+
+.photo_img {
+	width: 4rem;
+	height: 4rem;
+	border-radius:50%;
+}
+
+.availbility_online {
+
+}
+
+.availibity_online_sub {
+	height: 1rem;
+	width: 1rem;
+	margin:1rem;
+	margin-bottom: 0.2rem;
+	border-radius: 50%;
+	background-color: green;
+}
+
+.availibity_offline_sub {
+	height: 1rem;
+	width: 1rem;
+	margin:1rem;
+	margin-bottom: 0.2rem;
+	border-radius: 50%;
+	background-color: #939393;
+}
+
+.lb_title {
+	margin-top:0 rem;
+	margin-bottom: -0.3rem;
+	font-size: 0.7em;
+}
+
+.lawyer_name {
+	margin-top: 1rem;
+
+}
+
+.current_law_firm{
+	font-size: 0.8em;
+}
+
+/******************************************************lawyer_detail_area---------*/
+#lawyer_brief_area {
+	float:left;
+	display:inline;
+}
+
+#lawyer_detail_area {
+	display:inline;
+	float:left;
+	border-radius: 10px;
+	width: 38rem;
+	left: 10rem;
+	height: 43rem;
+	background-color: white;
+	margin-top: 1rem;
+	border-style: outset;
+	cursor: default;
+	overflow-y:scroll;	
+}
+#lawyer_detail_area::-webkit-scrollbar {
+    width: 0.3em;
+}
+
+.ff_quick_header {
+	font-weight: bold;
+}
+
+.ld_inner_div {
+	margin: 1rem;
+}
+
+.lb_tag_info {
+	margin:0.1rem;
+	float:left;
+	border:solid;
+	position:relative;
+	float: left;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0 10px;
+    position: relative;
+    height: 22px;
+    transition: all .3s;
+	text-decoration: none;
+	cursor:dafult;
+}
+
